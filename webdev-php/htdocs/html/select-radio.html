@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan Dengan Objek Radio</title>
+</head>
+<body>
+
+    <h1>Memasukkan Data Dengan Objek Radio</h1>
+    <hr>
+
+    <form>
+        <p>
+            <input type="radio" name="jenis_kelamin" value="wanita"> Wanita
+        </p>
+        <p>
+            <input type="radio" name="jenis_kelamin" value="pria"> Pria
+        </p>
+
+        <p>
+            <input type="button" value="CONFIRM" onclick="radio_box(this.form)">
+            <input type="reset" value="RESET">
+        </p>
+    </form>
+
+    <script>
+        function radio_box(form) {
+            var ket = "";
+
+            if (form.jenis_kelamin[0].checked) {
+                ket = "Wanita";
+            } else if (form.jenis_kelamin[1].checked) {
+                ket = "Pria";
+            } else {
+                alert("Silakan pilih jenis kelamin terlebih dahulu");
+                return;
+            }
+
+            alert("Anda adalah seorang " + ket);
+        }
+    </script>
+
+</body>
+</html>
