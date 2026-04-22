@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <?php 
+        $awal = 5;
+        $akhir = 20;
+        $i = 0;
+        $max_i = 10;
+        $acc_angka = 0;
+        $angkaTerbesar = 0;
+
+        do  {
+            $i++;
+            $angka = rand($awal, $akhir);
+            echo ("angka ke-".$i.": ".$angka."<br>");
+            $acc_angka = $acc_angka + $angka ;
+            
+            if ($angka > $angkaTerbesar) {
+                $angkaTerbesar = $angka;
+            }
+        } while ($i < $max_i);
+
+        
+        echo("<br>");
+        echo("Jumlah seluruh angka = ".$acc_angka);
+        echo("<br>");
+        echo("Angka yang paling besar = ".$angkaTerbesar);
+    ?>
+</body>
+</html>
+
