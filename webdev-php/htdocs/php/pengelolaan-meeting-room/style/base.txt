@@ -1,0 +1,13 @@
+| Elemen | Hex Code | Keterangan |
+| --- | --- | --- |
+| **Primary** | `#2563EB` | Warna utama (button, link, menu aktif) |
+| **Secondary** | `#64748B` | Warna pendukung |
+| **Background** | `#F8FAFC` | Background halaman |
+| **Surface / Card** | `#FFFFFF` | Card, modal, navbar |
+| **Text Primary** | `#1E293B` | Judul dan isi utama |
+| **Text Secondary** | `#64748B` | Deskripsi, placeholder |
+| **Border** | `#E2E8F0` | Border tabel, card, input |
+| **Success** | `#22C55E` | Status berhasil |
+| **Warning** | `#F59E0B` | Peringatan |
+| **Danger** | `#EF4444` | Error, hapus |
+| **Info** | `#0EA5E9` | Informasi |
