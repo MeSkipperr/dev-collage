@@ -1,4 +1,5 @@
 <?php
+include 'auth_check.php';
 include 'koneksi.php';
 
 $total_gedung = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(*) as total FROM building"))['total'];
@@ -22,12 +23,14 @@ $bookings = mysqli_query($conn, "SELECT b.*, r.room_name FROM booking b JOIN roo
 </head>
 <body>
     <div class="sidebar">
+        <div class="logo"><h3><i class="fas fa-building"></i> MeetingRoom</h3></div>
         <nav>
             <a href="index.php" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             <a href="building/index.php"><i class="fas fa-building"></i> Gedung</a>
             <a href="rooms/index.php"><i class="fas fa-door-open"></i> Ruangan</a>
             <a href="facility/index.php"><i class="fas fa-tools"></i> Fasilitas</a>
             <a href="booking/index.php"><i class="fas fa-calendar-check"></i> Booking</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </nav>
     </div>
     <div class="main">

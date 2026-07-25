@@ -21,8 +21,17 @@ body {
     left: 0;
     height: 100vh;
     padding: 20px 0;
+    display: flex;
+    flex-direction: column;
 }
 
+.logo h3 {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
 
 .sidebar nav a {
     display: block;
@@ -32,10 +41,21 @@ body {
     transition: 0.2s;
 }
 
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .sidebar nav a:hover,
 .sidebar nav a.active {
     background: #2563EB;
     color: white;
+}
+
+.sidebar nav a[href*="logout"] {
+    border-top: 1px solid #334155;
+    margin-top: auto;
 }
 
 .sidebar nav a i {

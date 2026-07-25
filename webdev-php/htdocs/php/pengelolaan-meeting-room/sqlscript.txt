@@ -82,6 +82,15 @@ CREATE TABLE IF NOT EXISTS booking (
 );
 
 -- =========================================
+-- USER
+-- =========================================
+CREATE TABLE IF NOT EXISTS user (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+-- =========================================
 -- DUMMY DATA
 -- =========================================
 
@@ -294,4 +303,16 @@ SELECT 1
 FROM booking
 WHERE meeting_title='Vendor Meeting'
 AND meeting_date='2026-07-12'
+);
+
+-- =========================================
+-- USER
+-- =========================================
+
+INSERT INTO user (username, password)
+SELECT * FROM(
+SELECT 'admin','$2y$10$4lcqfbpXo2neIPFdDZOFF.MzIl.fDiOkoRMh0sDAvsVE9fVJHVG.y'
+) x
+WHERE NOT EXISTS(
+SELECT 1 FROM user WHERE username='admin'
 );

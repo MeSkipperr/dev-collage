@@ -1,5 +1,6 @@
 <?php
 
+include '../auth_check.php';
 include '../koneksi.php';
 
 mysqli_query($conn,"INSERT INTO booking

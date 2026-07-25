@@ -1,5 +1,6 @@
 <?php
 
+include '../auth_check.php';
 include '../koneksi.php';
 
 $booking_id = $_POST['booking_id'];
